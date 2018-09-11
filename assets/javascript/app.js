@@ -182,8 +182,6 @@
 	showSlide(0);
 
 	// on submit, show results
-	
-	
 	submitButton.addEventListener("click", showResults);
 	previousButton.addEventListener("click", showPreviousSlide);
 	nextButton.addEventListener("click", showNextSlide);
@@ -195,15 +193,14 @@
 	//  Variable that will hold our interval ID when we execute
 	//  the "run" function
 	var intervalId;
-	
+
 
 	$("#submit").on("click", stop);
 
 
-
-	function reset(){
+	function reset() {
+		
 		showResults();
-		buildQuiz();
 		stop();
 	}
 
@@ -219,12 +216,9 @@
 		$("#show-number").html("<h2>" + number + "</h2>"); //  Show the number in the #show-number tag.
 		//  Once number hits zero...
 		if (number === 0) {
-			stop();
+			
 			alert("Time Up!"); //  Alert the user that time is up.
-
-			reset(); 	
-
-
+			reset();
 		}
 	}
 
